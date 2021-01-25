@@ -66,6 +66,8 @@ public class CRNotificationView: UIView, CRNotification {
         self.setBackgroundColor(color: type.backgroundColor)
         self.setTextColor(color: type.textColor)
         self.setImage(image: type.image)
+        self.setImageViewTintColor(color: type.textColor)
+        self.setBorder(borderWidth: 1.0, borderColor: type.textColor)
     }
     
     
@@ -81,29 +83,22 @@ public class CRNotificationView: UIView, CRNotification {
     private func setupSubviews() {
         addSubview(imageView)
         addSubview(titleLabel)
-        addSubview(messageLabel)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: imageView.superview!.topAnchor, constant: 12),
             imageView.leadingAnchor.constraint(equalTo: imageView.superview!.leadingAnchor, constant: 12),
-            imageView.bottomAnchor.constraint(equalTo: imageView.superview!.bottomAnchor, constant: -12),
+            imageView.centerYAnchor.constraint(equalTo: imageView.superview!.centerYAnchor),
+            imageView.heightAnchor.constraint(equalToConstant: 30),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
         ])
 		
 		NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(lessThanOrEqualTo: titleLabel.superview!.topAnchor, constant: 8),
             titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: titleLabel.superview!.trailingAnchor, constant: -8)
+            titleLabel.trailingAnchor.constraint(equalTo: titleLabel.superview!.trailingAnchor, constant: -8),
+            titleLabel.centerYAnchor.constraint(equalTo: imageView.centerYAnchor)
         ])
 		
-		NSLayoutConstraint.activate([
-            messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
-            messageLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            messageLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
-            messageLabel.bottomAnchor.constraint(lessThanOrEqualTo: messageLabel.superview!.bottomAnchor, constant: -5)
-        ])
     }
     
     private func setupTargets() {
@@ -149,7 +144,16 @@ public class CRNotificationView: UIView, CRNotification {
     
     /** Sets the image of the notification **/
     internal func setImage(image: UIImage?) {
-        imageView.image = image
+        imageView.image = image?.withRenderingMode(.alwaysTemplate)
+    }
+    
+    internal func setImageViewTintColor(color: UIColor) {
+        imageView.tintColor = color
+    }
+
+    internal func setBorder(borderWidth: Double, borderColor: UIColor) {
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.borderWidth = CGFloat(borderWidth)
     }
     
     /** Sets the completion block of the notification for when it is dismissed **/
