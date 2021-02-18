@@ -16,9 +16,9 @@ public class CRNotifications {
     
     // MARK: - Static notification types
     
-    public static let success: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatGreen, image: UIImage(named: "success", in: Bundle(for: CRNotifications.self), compatibleWith: nil))
-    public static let error: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatRed, image: UIImage(named: "error", in: Bundle(for: CRNotifications.self), compatibleWith: nil))
-    public static let info: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatGray, image: UIImage(named: "info", in: Bundle(for: CRNotifications.self), compatibleWith: nil))
+    public static let success: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatGreen, image: UIImage(named: "success", in: Bundle(for: CRNotifications.self), compatibleWith: nil), borderColor: UIColor.flatGreen)
+    public static let error: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatRed, image: UIImage(named: "error", in: Bundle(for: CRNotifications.self), compatibleWith: nil), borderColor: UIColor.flatRed)
+    public static let info: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatGray, image: UIImage(named: "info", in: Bundle(for: CRNotifications.self), compatibleWith: nil), borderColor: UIColor.flatGray)
 
     
     // MARK: - Init
@@ -32,8 +32,8 @@ public class CRNotifications {
         Returns the CRNotification that is displayed. Returns nil if the keyWindow is not present.
      **/
     @discardableResult
-    public static func showNotification(textColor: UIColor, backgroundColor: UIColor, image: UIImage?, title: String, message: String, dismissDelay: TimeInterval, delegate: CRNotificationDelegate? = nil, completion: @escaping () -> () = {}) -> CRNotification? {
-        let notificationDefinition = CRNotificationTypeDefinition(textColor: textColor, backgroundColor: backgroundColor, image: image)
+    public static func showNotification(textColor: UIColor, backgroundColor: UIColor, image: UIImage?, borderColor: UIColor, title: String, message: String, dismissDelay: TimeInterval, delegate: CRNotificationDelegate? = nil, completion: @escaping () -> () = {}) -> CRNotification? {
+        let notificationDefinition = CRNotificationTypeDefinition(textColor: textColor, backgroundColor: backgroundColor, image: image, borderColor: borderColor)
         return showNotification(type: notificationDefinition, title: title, message: message, dismissDelay: dismissDelay, delegate: delegate, completion: completion)
     }
     
@@ -66,4 +66,5 @@ fileprivate struct CRNotificationTypeDefinition: CRNotificationType {
     var textColor: UIColor
     var backgroundColor: UIColor
     var image: UIImage?
+    var borderColor: UIColor
 }

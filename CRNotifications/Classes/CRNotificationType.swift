@@ -13,4 +13,5 @@ public protocol CRNotificationType {
     var textColor: UIColor { get }
     var backgroundColor: UIColor { get }
     var image: UIImage? { get }
+    var borderColor: UIColor { get }
 }

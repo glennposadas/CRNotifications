@@ -66,8 +66,7 @@ public class CRNotificationView: UIView, CRNotification {
         self.setBackgroundColor(color: type.backgroundColor)
         self.setTextColor(color: type.textColor)
         self.setImage(image: type.image)
-        self.setImageViewTintColor(color: type.textColor)
-        self.setBorder(borderWidth: 1.0, borderColor: type.textColor)
+        self.setBorder(borderWidth: 1.0, borderColor: type.borderColor)
     }
     
     
@@ -144,11 +143,7 @@ public class CRNotificationView: UIView, CRNotification {
     
     /** Sets the image of the notification **/
     internal func setImage(image: UIImage?) {
-        imageView.image = image?.withRenderingMode(.alwaysTemplate)
-    }
-    
-    internal func setImageViewTintColor(color: UIColor) {
-        imageView.tintColor = color
+        imageView.image = image
     }
 
     internal func setBorder(borderWidth: Double, borderColor: UIColor) {
