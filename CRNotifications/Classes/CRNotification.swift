@@ -25,7 +25,7 @@ public class CRNotificationView: UIView, CRNotification {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-        label.numberOfLines = 2
+        label.numberOfLines = 3
         label.textColor = .white
         return label
     }()
