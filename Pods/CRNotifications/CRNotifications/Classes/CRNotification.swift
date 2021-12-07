@@ -142,6 +142,13 @@ public class CRNotificationView: UIView, CRNotification {
         titleLabel.text = title
     }
     
+    internal func setTitleFont(font: UIFont?) {
+        guard let _ = font else {
+            return
+        }
+        
+        titleLabel.font = font!
+    }
     /** Sets the message of the notification **/
     internal func setMessage(message: String) {
         messageLabel.text = message
