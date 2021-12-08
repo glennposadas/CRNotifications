@@ -41,7 +41,7 @@ public class CRNotifications {
         Returns the CRNotification that is displayed. Returns nil if the keyWindow is not present.
      **/
     @discardableResult
-    public static func showNotification(type: CRNotificationType, title: String, message: String, dismissDelay: TimeInterval, delegate: CRNotificationDelegate? = nil, completion: @escaping () -> () = {}) -> CRNotification? {
+    public static func showNotification(type: CRNotificationType, title: String, message: String, dismissDelay: TimeInterval, font: UIFont? = nil, delegate: CRNotificationDelegate? = nil, completion: @escaping () -> () = {}) -> CRNotification? {
         let view = CRNotificationView(type: type)
         
         view.setTitle(title: title)
@@ -49,6 +49,7 @@ public class CRNotifications {
         view.setDismisTimer(delay: dismissDelay)
 		view.setCompletionBlock(completion)
         view.delegate = delegate
+        view.setTitleFont(font: font)
         
         guard let window = UIApplication.shared.keyWindow else {
             print("Failed to show CRNotification. No keywindow available.")
