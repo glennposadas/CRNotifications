@@ -25,7 +25,6 @@ public class CRNotificationView: UIView, CRNotification {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 15, weight: .bold)
-        label.numberOfLines = 3
         label.textColor = .white
         return label
     }()
@@ -37,18 +36,25 @@ public class CRNotificationView: UIView, CRNotification {
         label.textColor = .white
         label.numberOfLines = 2
         return label
-	}()
-	
+    }()
+    
+    private lazy var sv: UIStackView = {
+        let sv = UIStackView(arrangedSubviews: [titleLabel, messageLabel])
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.axis = .vertical
+        return sv
+    }()
+    
     private var completion: () -> () = {}
     private var type: CRNotificationType
     public var delegate: CRNotificationDelegate?
     
     // MARK: - Init
-	
+    
     required internal init?(coder aDecoder:NSCoder) { fatalError("Not implemented.") }
     
     internal init(type: CRNotificationType) {
-		let deviceWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
+        let deviceWidth = min(UIScreen.main.bounds.width, UIScreen.main.bounds.height)
         let widthFactor: CGFloat = DeviceManager.value(iPhone35: 0.9, iPhone40: 0.9, iPhone47: 0.9, iPhone55: 0.85, iPhone58: 0.9, iPhone61: 0.9, iPadSmall: 0.5, iPadMedium: 0.45, iPadBig: 0.4)
         let heightFactor: CGFloat = DeviceManager.value(iPhone35: 0.22, iPhone40: 0.22, iPhone47: 0.2, iPhone55: 0.2, iPhone58: 0.18, iPhone61: 0.18, iPadSmall: 0.18, iPadMedium: 0.17, iPadBig: 0.17)
 
@@ -67,7 +73,6 @@ public class CRNotificationView: UIView, CRNotification {
         self.setBackgroundColor(color: type.backgroundColor)
         self.setTextColor(color: type.textColor)
         self.setImage(image: type.image)
-        self.setBorder(borderWidth: 1.0, borderColor: type.borderColor)
     }
     
     
@@ -82,23 +87,22 @@ public class CRNotificationView: UIView, CRNotification {
     
     private func setupSubviews() {
         addSubview(imageView)
-        addSubview(titleLabel)
+        addSubview(sv)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: imageView.superview!.topAnchor, constant: 12),
             imageView.leadingAnchor.constraint(equalTo: imageView.superview!.leadingAnchor, constant: 12),
-            imageView.centerYAnchor.constraint(equalTo: imageView.superview!.centerYAnchor),
-            imageView.heightAnchor.constraint(equalToConstant: 30),
+            imageView.bottomAnchor.constraint(equalTo: imageView.superview!.bottomAnchor, constant: -12),
             imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor)
         ])
-		
-		NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8),
-            titleLabel.trailingAnchor.constraint(equalTo: titleLabel.superview!.trailingAnchor, constant: -8),
-            titleLabel.centerYAnchor.constraint(equalTo: imageView.centerYAnchor)
+        
+        NSLayoutConstraint.activate([
+            sv.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
+            sv.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8),
+            sv.trailingAnchor.constraint(equalTo: titleLabel.superview!.trailingAnchor, constant: -8)
         ])
-		
     }
     
     private func setupTargets() {
@@ -109,7 +113,7 @@ public class CRNotificationView: UIView, CRNotification {
         
         addGestureRecognizer(tapRecognizer)
         addGestureRecognizer(swipeRecognizer)
-	}
+    }
     
     
     // MARK: - Helpers
@@ -137,27 +141,21 @@ public class CRNotificationView: UIView, CRNotification {
         titleLabel.text = title
     }
     
-    /** Sets the message of the notification **/
-    internal func setMessage(message: String) {
-        messageLabel.text = message
-    }
-
     internal func setTitleFont(font: UIFont?) {
         guard let _ = font else {
             return
         }
-
+        
         titleLabel.font = font!
+    }
+    /** Sets the message of the notification **/
+    internal func setMessage(message: String) {
+        messageLabel.text = message
     }
     
     /** Sets the image of the notification **/
     internal func setImage(image: UIImage?) {
         imageView.image = image
-    }
-
-    internal func setBorder(borderWidth: Double, borderColor: UIColor) {
-        self.layer.borderColor = borderColor.cgColor
-        self.layer.borderWidth = CGFloat(borderWidth)
     }
     
     /** Sets the completion block of the notification for when it is dismissed **/
