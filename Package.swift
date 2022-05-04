@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "CRNotifications",
     platforms: [
-      .iOS(.v9)
+        .iOS(.v9)
     ],
     products: [
         .library(
@@ -19,7 +19,9 @@ let package = Package(
             dependencies: [],
             path: "CRNotifications",
             resources: [
-              .process("CRNotifications/Assets")
+                .process("CRNotifications/Assets/"),
+                .process("CRNotifications/Assets/CRNotificationsMedia"),
+                .process("CRNotifications/Assets/CRNotificationsMedia.xcassets"),
             ]
         )
     ],
