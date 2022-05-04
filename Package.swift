@@ -20,8 +20,7 @@ let package = Package(
             path: "CRNotifications",
             resources: [
                 .process("Assets"),
-                .process("Assets/CRNotificationsMedia"),
-                .process("Assets/CRNotificationsMedia.xcassets")
+                .process("Assets/CRNotificationsMedia")
             ]
         )
     ],
