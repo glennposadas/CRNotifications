@@ -19,6 +19,7 @@ let package = Package(
             dependencies: [],
             path: "CRNotifications",
             resources: [
+                .process("Assets"),
                 .process("Assets/CRNotificationsMedia")
             ]
         )

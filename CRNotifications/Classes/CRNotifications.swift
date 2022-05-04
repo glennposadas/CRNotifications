@@ -16,9 +16,9 @@ public class CRNotifications {
     
     // MARK: - Static notification types
     
-    public static let success: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatGreen, image: UIImage(named: "success", in: Bundle(for: CRNotifications.self), compatibleWith: nil), borderColor: UIColor.flatGreen)
-    public static let error: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatRed, image: UIImage(named: "error", in: Bundle(for: CRNotifications.self), compatibleWith: nil), borderColor: UIColor.flatRed)
-    public static let info: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatGray, image: UIImage(named: "info", in: Bundle(for: CRNotifications.self), compatibleWith: nil), borderColor: UIColor.flatGray)
+    public static let success: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatGreen, image: UIImage(named: "success", in: CRNotificationResources.resourceBundle, compatibleWith: nil), borderColor: UIColor.flatGreen)
+    public static let error: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatRed, image: UIImage(named: "error", in: CRNotificationResources.resourceBundle, compatibleWith: nil), borderColor: UIColor.flatRed)
+    public static let info: CRNotificationType = CRNotificationTypeDefinition(textColor: UIColor.white, backgroundColor: UIColor.flatGray, image: UIImage(named: "info", in: CRNotificationResources.resourceBundle, compatibleWith: nil), borderColor: UIColor.flatGray)
 
     
     // MARK: - Init
