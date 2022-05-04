@@ -63,9 +63,9 @@ public class CRNotifications {
     }
 }
 
-public struct CRNotificationTypeDefinition: CRNotificationType {
-    public var textColor: UIColor
-    public var backgroundColor: UIColor
-    public var image: UIImage?
-    public var borderColor: UIColor
+fileprivate struct CRNotificationTypeDefinition: CRNotificationType {
+    var textColor: UIColor
+    var backgroundColor: UIColor
+    var image: UIImage?
+    var borderColor: UIColor
 }
