@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CRNotifications
 
 class ViewController: UIViewController {
     
@@ -27,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showCustom(_ sender: Any) {
-        let customNotification = CustomCRNotification(textColor: UIColor.green, backgroundColor: UIColor.brown, image: UIImage())
+        let customNotification = CustomCRNotification(borderColor: .black, textColor: UIColor.green, backgroundColor: UIColor.brown, image: UIImage())
         CRNotifications.showNotification(type: customNotification, title: "Did you know?", message: "This notification is very long and resizes itself in order to fit the size of the view. These last words exceed the limit.", dismissDelay: 3)
     }
 	
@@ -41,6 +40,8 @@ class ViewController: UIViewController {
 }
 
 fileprivate struct CustomCRNotification: CRNotificationType {
+    var borderColor: UIColor
+    
     var textColor: UIColor
     var backgroundColor: UIColor
     var image: UIImage?

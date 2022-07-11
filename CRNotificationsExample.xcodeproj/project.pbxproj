@@ -7,18 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45F4CBD3287BDB0900F27228 /* CRNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4CBCB287BDB0900F27228 /* CRNotification.swift */; };
+		45F4CBD4287BDB0900F27228 /* CRNotificationResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4CBCC287BDB0900F27228 /* CRNotificationResources.swift */; };
+		45F4CBD5287BDB0900F27228 /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4CBCD287BDB0900F27228 /* DeviceManager.swift */; };
+		45F4CBD6287BDB0900F27228 /* CRNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4CBCE287BDB0900F27228 /* CRNotifications.swift */; };
+		45F4CBD7287BDB0900F27228 /* CRNotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4CBCF287BDB0900F27228 /* CRNotificationType.swift */; };
+		45F4CBD8287BDB0900F27228 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F4CBD0287BDB0900F27228 /* Colors.swift */; };
+		45F4CBD9287BDB0900F27228 /* CRNotificationsMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F4CBD2287BDB0900F27228 /* CRNotificationsMedia.xcassets */; };
 		AF3C46C71F0EB36300CA7DE8 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3C46C61F0EB36300CA7DE8 /* PushViewController.swift */; };
 		AF9017931E817E2600F4D8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9017921E817E2600F4D8F8 /* AppDelegate.swift */; };
 		AF9017951E817E2600F4D8F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9017941E817E2600F4D8F8 /* ViewController.swift */; };
 		AF9017981E817E2600F4D8F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9017961E817E2600F4D8F8 /* Main.storyboard */; };
 		AF90179A1E817E2600F4D8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9017991E817E2600F4D8F8 /* Assets.xcassets */; };
 		AF90179D1E817E2600F4D8F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF90179B1E817E2600F4D8F8 /* LaunchScreen.storyboard */; };
-		D90AEE06CBB9C4139E66E352 /* Pods_CRNotificationsExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D27ADE23DCD735C2E86A31F /* Pods_CRNotificationsExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		24193BC70B4C0025A0146E19 /* Pods-CRNotificationsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRNotificationsExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CRNotificationsExample/Pods-CRNotificationsExample.release.xcconfig"; sourceTree = "<group>"; };
-		3D27ADE23DCD735C2E86A31F /* Pods_CRNotificationsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CRNotificationsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45F4CBCB287BDB0900F27228 /* CRNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotification.swift; sourceTree = "<group>"; };
+		45F4CBCC287BDB0900F27228 /* CRNotificationResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotificationResources.swift; sourceTree = "<group>"; };
+		45F4CBCD287BDB0900F27228 /* DeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		45F4CBCE287BDB0900F27228 /* CRNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotifications.swift; sourceTree = "<group>"; };
+		45F4CBCF287BDB0900F27228 /* CRNotificationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CRNotificationType.swift; sourceTree = "<group>"; };
+		45F4CBD0287BDB0900F27228 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		45F4CBD2287BDB0900F27228 /* CRNotificationsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = CRNotificationsMedia.xcassets; sourceTree = "<group>"; };
 		AF3C46C61F0EB36300CA7DE8 /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		AF90178F1E817E2600F4D8F8 /* CRNotificationsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CRNotificationsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9017921E817E2600F4D8F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +38,6 @@
 		AF9017991E817E2600F4D8F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF90179C1E817E2600F4D8F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF90179E1E817E2600F4D8F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2CAA818C0A3DE60568E5D2C /* Pods-CRNotificationsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CRNotificationsExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CRNotificationsExample/Pods-CRNotificationsExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,28 +45,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D90AEE06CBB9C4139E66E352 /* Pods_CRNotificationsExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		78F32DF0E667DFF8F84F5FA3 /* Frameworks */ = {
+		45F4CBC9287BDB0900F27228 /* CRNotifications */ = {
 			isa = PBXGroup;
 			children = (
-				3D27ADE23DCD735C2E86A31F /* Pods_CRNotificationsExample.framework */,
+				45F4CBCA287BDB0900F27228 /* Classes */,
+				45F4CBD1287BDB0900F27228 /* Assets */,
 			);
-			name = Frameworks;
+			path = CRNotifications;
+			sourceTree = "<group>";
+		};
+		45F4CBCA287BDB0900F27228 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				45F4CBCB287BDB0900F27228 /* CRNotification.swift */,
+				45F4CBCC287BDB0900F27228 /* CRNotificationResources.swift */,
+				45F4CBCD287BDB0900F27228 /* DeviceManager.swift */,
+				45F4CBCE287BDB0900F27228 /* CRNotifications.swift */,
+				45F4CBCF287BDB0900F27228 /* CRNotificationType.swift */,
+				45F4CBD0287BDB0900F27228 /* Colors.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		45F4CBD1287BDB0900F27228 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				45F4CBD2287BDB0900F27228 /* CRNotificationsMedia.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		AF9017861E817E2600F4D8F8 = {
 			isa = PBXGroup;
 			children = (
+				45F4CBC9287BDB0900F27228 /* CRNotifications */,
 				AF9017911E817E2600F4D8F8 /* CRNotificationsExample */,
 				AF9017901E817E2600F4D8F8 /* Products */,
-				D2707F3046572918B8625C2D /* Pods */,
-				78F32DF0E667DFF8F84F5FA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,15 +112,6 @@
 			path = CRNotificationsExample;
 			sourceTree = "<group>";
 		};
-		D2707F3046572918B8625C2D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D2CAA818C0A3DE60568E5D2C /* Pods-CRNotificationsExample.debug.xcconfig */,
-				24193BC70B4C0025A0146E19 /* Pods-CRNotificationsExample.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,12 +119,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF9017A11E817E2600F4D8F8 /* Build configuration list for PBXNativeTarget "CRNotificationsExample" */;
 			buildPhases = (
-				61B22BA6B5319D40E885C837 /* [CP] Check Pods Manifest.lock */,
 				AF90178B1E817E2600F4D8F8 /* Sources */,
 				AF90178C1E817E2600F4D8F8 /* Frameworks */,
 				AF90178D1E817E2600F4D8F8 /* Resources */,
-				3E3E8CA4FFE01341935D484E /* [CP] Embed Pods Frameworks */,
-				177AA681854FBAA1E77B5C0B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F4CBD9287BDB0900F27228 /* CRNotificationsMedia.xcassets in Resources */,
 				AF90179D1E817E2600F4D8F8 /* LaunchScreen.storyboard in Resources */,
 				AF90179A1E817E2600F4D8F8 /* Assets.xcassets in Resources */,
 				AF9017981E817E2600F4D8F8 /* Main.storyboard in Resources */,
@@ -162,71 +181,20 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		177AA681854FBAA1E77B5C0B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CRNotificationsExample/Pods-CRNotificationsExample-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/CRNotifications/CRNotifications.bundle,
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CRNotificationsExample/Pods-CRNotificationsExample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3E3E8CA4FFE01341935D484E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CRNotificationsExample/Pods-CRNotificationsExample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CRNotifications/CRNotifications.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CRNotifications.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CRNotificationsExample/Pods-CRNotificationsExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		61B22BA6B5319D40E885C837 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CRNotificationsExample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		AF90178B1E817E2600F4D8F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F4CBD6287BDB0900F27228 /* CRNotifications.swift in Sources */,
+				45F4CBD8287BDB0900F27228 /* Colors.swift in Sources */,
+				45F4CBD7287BDB0900F27228 /* CRNotificationType.swift in Sources */,
 				AF9017951E817E2600F4D8F8 /* ViewController.swift in Sources */,
+				45F4CBD5287BDB0900F27228 /* DeviceManager.swift in Sources */,
 				AF9017931E817E2600F4D8F8 /* AppDelegate.swift in Sources */,
 				AF3C46C71F0EB36300CA7DE8 /* PushViewController.swift in Sources */,
+				45F4CBD4287BDB0900F27228 /* CRNotificationResources.swift in Sources */,
+				45F4CBD3287BDB0900F27228 /* CRNotification.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +329,6 @@
 		};
 		AF9017A21E817E2600F4D8F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2CAA818C0A3DE60568E5D2C /* Pods-CRNotificationsExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -378,7 +345,6 @@
 		};
 		AF9017A31E817E2600F4D8F8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24193BC70B4C0025A0146E19 /* Pods-CRNotificationsExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

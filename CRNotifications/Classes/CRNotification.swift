@@ -59,10 +59,12 @@ public class CRNotificationView: UIView, CRNotification {
         let heightFactor: CGFloat = DeviceManager.value(iPhone35: 0.22, iPhone40: 0.22, iPhone47: 0.2, iPhone55: 0.2, iPhone58: 0.18, iPhone61: 0.18, iPadSmall: 0.18, iPadMedium: 0.17, iPadBig: 0.17)
 
         let width = deviceWidth * widthFactor
+        
         let height = width * heightFactor
+        
         self.type = type
         
-        super.init(frame: CGRect(x: 0, y: -height, width: width, height: height))
+        super.init(frame: CGRect(x: 0, y: UIScreen.main.bounds.height + 100, width: width, height: height))
         center.x = UIScreen.main.bounds.width/2
         setupLayer()
         setupSubviews()
@@ -101,7 +103,7 @@ public class CRNotificationView: UIView, CRNotification {
         NSLayoutConstraint.activate([
             sv.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
             sv.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8),
-            sv.trailingAnchor.constraint(equalTo: titleLabel.superview!.trailingAnchor, constant: -8)
+            sv.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
         ])
     }
     
@@ -109,7 +111,7 @@ public class CRNotificationView: UIView, CRNotification {
         NotificationCenter.default.addObserver(self, selector: #selector(didRotate), name: UIDevice.orientationDidChangeNotification, object: nil)
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissNotificationOnTap))
         let swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(self.dismissNotification))
-        swipeRecognizer.direction = .up
+        swipeRecognizer.direction = .down
         
         addGestureRecognizer(tapRecognizer)
         addGestureRecognizer(swipeRecognizer)
@@ -173,7 +175,7 @@ public class CRNotificationView: UIView, CRNotification {
     /** Animates in the notification **/
     internal func showNotification() {
         UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: 0.68, initialSpringVelocity: 0.1, options: UIView.AnimationOptions(), animations: {
-            self.frame.origin.y = self.topInset() + 10
+            self.frame.origin.y = UIScreen.main.bounds.height - (self.topInset() + 100)
         })
     }
     
@@ -207,15 +209,11 @@ public class CRNotificationView: UIView, CRNotification {
     
     public func hide() {
         UIView.animate(withDuration: 0.1, animations: {
-            self.frame.origin.y = self.frame.origin.y + 5
+            self.frame.origin.y = UIScreen.main.bounds.height + 100
         }, completion: {
             (complete: Bool) in
-            UIView.animate(withDuration: 0.25, animations: {
-                self.center.y = -self.frame.height
-            }, completion: { [weak self] (complete) in
-                self?.completion()
-                self?.removeFromSuperview()
-            })
+            self.completion()
+            self.removeFromSuperview()
         })
     }
     
