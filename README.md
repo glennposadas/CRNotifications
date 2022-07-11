@@ -1,3 +1,9 @@
+### NOTE ⚠️:
+This is a fork, and in this fork, I modified the library to make the toast start from the bottom.
+This also has some fixes in the constraints.
+
+![Screen Shot 2022-07-11 at 6 00 35 PM](https://user-images.githubusercontent.com/12502679/178239920-5cb2e739-1a76-42e3-82c8-ffe9dfb53103.png)
+
 # CRNotifications
 CRNotifications are custom in-app notifications with 3 types of layouts. The notifications will animate in and out. They will hide when they are clicked on or with an automatic dismissal.
 
